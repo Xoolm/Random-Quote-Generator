@@ -1,0 +1,90 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75%;
+}
+
+.quote-box {
+  padding: 30px;
+  border-radius: 20px;
+  background-color: white;
+  max-width: 600px;
+  animation: newQuote 1s forwards;
+}
+
+.quote {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.author {
+  padding-top: 30px;
+  font-size: 20px;
+}
+.text {
+  font-size: 25px;
+}
+
+.text.entering,
+.author.entering {
+  visibility: hidden;
+  opacity: 0.05;
+}
+
+.text.entered,
+.author.entered {
+  opacity: 1;
+  transition: opacity 2s;
+}
+
+.text.exiting,
+.author.exiting {
+  visibility: hidden;
+  opacity: 0.05;
+}
+
+.text.exited,
+.author.exited {
+  transition: opacity 2s;
+  opacity: 1;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnRandomQuote {
+  margin-top: 15px;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  transition: 2s, opacity 0.3s;
+}
+
+.btnRandomQuote:hover {
+  opacity: 0.8;
+}
+
+.btnRandomQuote:active {
+  transition: 0.01s;
+}
+
+.tweet {
+  width: 40px;
+  height: 40px;
+  padding-top: 15px;
+}
+
+.twitter * {
+  padding-top: 10px;
+  transition: fill 2s, opacity 0.3s;
+}
+
+.twitter:hover * {
+  opacity: 0.8;
+}
