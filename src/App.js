@@ -42,6 +42,7 @@ function App() {
         <div className="inputBox">
           <h2 className="inputTitle">Добавь свою цитату</h2>
           <input
+            style={{ background: randomColor }}
             onChange={(e) => setAuthor(e.target.value)}
             value={author}
             type="text"
@@ -49,13 +50,18 @@ function App() {
             className="inputName"
           ></input>
           <input
+            style={{ background: randomColor }}
             onChange={(e) => setQuote(e.target.value)}
             value={quote}
             type="text"
             placeholder="Цитата"
             className="inputQuote"
           ></input>
-          <button onClick={handlClick} className="inputBtn">
+          <button
+            style={{ background: randomColor }}
+            onClick={handlClick}
+            className="inputBtn"
+          >
             Добавить
           </button>
         </div>

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@700&family=Playfair+Display:ital@1&display=swap");
+
 .wrapper {
   display: flex;
   align-items: center;
@@ -51,12 +53,19 @@
   opacity: 1;
 }
 
+.inputBtn,
+.inputQuote,
+.inputName {
+  transition: 2s;
+}
+
 .buttons {
   display: flex;
   justify-content: space-between;
 }
 
 .btnRandomQuote {
+  font-family: "Alegreya Sans SC", sans-serif;
   margin-top: 15px;
   border-radius: 10px;
   padding: 10px;
