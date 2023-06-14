@@ -52,9 +52,24 @@ const quoteMachine = createSlice({
   reducers: {
     randQuote(state) {
       const randomIndexQ = Math.floor(Math.random() * state.quoteAuthor.length);
-      state.randomQuote = state.quoteAuthor[randomIndexQ];
+      const prevQuote = state.randomQuote;
+      const nextQuote = state.quoteAuthor[randomIndexQ];
+      if (prevQuote.quote === nextQuote.quote) {
+        const index = (randomIndexQ + 1) % state.quoteAuthor.length;
+        state.randomQuote = state.quoteAuthor[index];
+      } else {
+        state.randomQuote = state.quoteAuthor[randomIndexQ];
+      }
+
       const randomIndexC = Math.floor(Math.random() * state.Pullcolor.length);
-      state.randomColor = state.Pullcolor[randomIndexC];
+      const prevColor = state.randomColor;
+      const nextColor = state.Pullcolor[randomIndexC];
+      if (prevColor === nextColor) {
+        const index = (randomIndexC + 1) % state.Pullcolor.length;
+        state.randomColor = state.Pullcolor[index];
+      } else {
+        state.randomColor = state.Pullcolor[randomIndexC];
+      }
     },
     addQuote(state, action) {
       state.quoteAuthor = [...state.quoteAuthor, action.payload];

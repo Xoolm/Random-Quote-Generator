@@ -12,7 +12,6 @@
   border-radius: 20px;
   background-color: white;
   max-width: 600px;
-  animation: newQuote 1s forwards;
 }
 
 .quote {
@@ -24,35 +23,36 @@
 .author {
   padding-top: 30px;
   font-size: 20px;
+  transition: 0.5s;
 }
 .text {
   font-size: 25px;
+  transition: 0.5s;
 }
 
 .text.entering,
 .author.entering {
-  visibility: hidden;
-  opacity: 0.05;
+  opacity: 0;
 }
 
 .text.entered,
 .author.entered {
   opacity: 1;
-  transition: opacity 2s;
+  transition: 1s;
 }
 
 .text.exiting,
 .author.exiting {
-  visibility: hidden;
-  opacity: 0.05;
+  opacity: 0;
+  transition: 2;
 }
 
 .text.exited,
 .author.exited {
-  transition: opacity 2s;
-  opacity: 1;
+  opacity: 0;
 }
 
+.inputTitle,
 .inputBtn,
 .inputQuote,
 .inputName {

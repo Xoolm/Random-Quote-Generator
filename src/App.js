@@ -8,7 +8,7 @@ import { Transition } from "react-transition-group";
 import { ReactComponent as Twitter } from "./img/twitter.svg";
 
 function App() {
-  const [inProp, setInProp] = useState(false);
+  const [inProp, setInProp] = useState(true);
 
   const [quote, setQuote] = useState("");
   const [author, setAuthor] = useState("");
@@ -29,8 +29,15 @@ function App() {
   };
 
   const addNewQuote = () => {
-    dispatch(randQuote());
-    setInProp(!inProp);
+    setTimeout(() => {
+      dispatch(randQuote());
+    }, 500);
+
+    setInProp(false);
+
+    setTimeout(() => {
+      setInProp(true);
+    }, 500);
   };
 
   return (
@@ -69,7 +76,7 @@ function App() {
       <div className="wrapper">
         <div className="quote-box">
           <quote className="quote">
-            <Transition in={inProp}>
+            <Transition in={inProp} timeout={100}>
               {(state) => (
                 <>
                   <div className={`text ${state}`}>{randomQuote.quote}</div>
@@ -80,7 +87,7 @@ function App() {
           </quote>
           <div className="buttons">
             <a
-              href={`https://twitter.com/intend/tweet?text=${randomQuote.quote}`}
+              href={`https://twitter.com/intent/tweet?text=${randomQuote.quote}`}
               className="tweet"
               target="_blank"
               rel="noopener noreferrer"
