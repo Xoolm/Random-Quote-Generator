@@ -1,0 +1,8 @@
+@media (max-width: 450px) {
+  .inputBoxWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 30px 0px 0px 0px;
+  }
+}

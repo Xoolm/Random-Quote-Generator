@@ -1,6 +1,6 @@
 import React from "react";
-import "../../style/quote.css";
-import "../../style/adaptation/adaptationAll.css";
+import "../AddQuote/inputQuote.css";
+import "../../style/adaptation/addQuoteAdaptation.css";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addQuote } from "../../toolkitRedux/toolkitSlice";

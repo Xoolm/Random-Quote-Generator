@@ -2,7 +2,8 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { randQuote } from "../../toolkitRedux/toolkitSlice";
 import { useState } from "react";
-import "../../style/input_style/inputQuote.css";
+import "../NextQuote/quote.css";
+import "../../style/adaptation/NextQuoteAdaptation.css";
 import { Transition } from "react-transition-group";
 import { ReactComponent as Twitter } from "../../img/twitter.svg";
 

@@ -1,0 +1,10 @@
+@media (max-width: 450px) {
+  .wrapper {
+    padding: 0 25px 0;
+    height: 60%;
+  }
+  .quote-box {
+    text-align: center;
+    padding: 20px;
+  }
+}
